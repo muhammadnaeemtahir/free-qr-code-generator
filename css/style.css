@@ -1,0 +1,43 @@
+:root {
+    --color-dark: #212529;
+    --color-light: #f8f9fa;
+    --color-success: #6ba32d;
+}
+
+body {
+    color: var(--color-dark);
+}
+
+body a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.dark-theme {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.btn-success:hover {
+    background-color: var(--color-success) !important;
+    border-color: var(--color-success) !important;
+}
+
+.text-success {
+    color: var(--color-success) !important;
+}
+
+input {
+    caret-color: var(--color-success);
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 0.1rem rgb(107 163 45 / 100%);
+    outline: unset;
+}

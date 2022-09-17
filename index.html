@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Free QR code generator</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- font awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- jQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- qrcode.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+        integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body class="dark-theme">
+    <!-- start: header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="h2 text-light text-decoration-none" href="./index.html"><img src="./assets/logo.png"
+                        width="40" height="40" alt="Free QR code generator"></a>
+                <button id="themeBtn" class="bg-transparent border-0"><i
+                        class="fa-solid fa-circle-half-stroke text-light fs-3"></i></button>
+            </div>
+        </nav>
+    </header>
+    <!-- end: header -->
+
+    <!-- main-content -->
+    <main>
+        <div class="col-md-9 mx-auto px-md-5 px-3 py-3">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="mb-3 text-md-start text-center">
+                        <h4 class="text-light font-monospace fw-bold">Free QR code generator</h4>
+                        <p class="text-light">Enter your URL below to generate a QR Code and download the image.</p>
+                    </div>
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="url" class="form-label">URL</label>
+                            <input type="text" name="url" id="url" class="form-control bg-light"
+                                placeholder="Enter a valid URL">
+                        </div>
+                        <div class="mb-3">
+                            <label for="size" class="form-label">QR code size</label>
+                            <select name="size" id="size" class="form-select">
+                                <option value="100" selected>100 X 100</option>
+                                <option value="200">200 X 200</option>
+                                <option value="300">300 X 300</option>
+                                <option value="400">400 X 400</option>
+                                <option value="500">500 X 500</option>
+                                <option value="600">600 X 600</option>
+                                <option value="700">700 X 700</option>
+                                <option value="800">800 X 800</option>
+                                <option value="900">900 X 900</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-success w-100" type="submit">Generate QR</button>
+                    </form>
+                </div>
+                <div class="col-md-6 text-center d-md-block d-none">
+                    <img class="img-fluid w-75" src="./assets/hero-img.svg" alt="Free QR code generator">
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <div class="spinner-border text-success" id="spinner" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <!-- start: footer -->
+    <footer class="bg-dark">
+        <div class="container text-center">
+            <!-- yet to complete -->
+        </div>
+    </footer>
+    <!-- end: footer -->
+    <!-- bootstrap js bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <!-- custom js -->
+    <script src="./js/theme.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
